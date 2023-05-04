@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>To Do List</title>
+</head>
+
+<body>
+
+    <h1>
+        <%= listTitle %>
+    </h1>
+
+    <ul> 
+        <% for (let i=0; i < lisOfItems.length; i++) { %>
+            <li>
+                <%= lisOfItems[i] %>
+            </li>
+            <% } %>
+    </ul>
+
+    <!-- Submit button will make a post request to the home route -->
+    <!-- In this example, the form element specifies the target URL for the form submission using the action attribute. The
+    method attribute specifies the HTTP method to use for the submission, which in this case is post.
+
+    The input element with type="submit" creates a button that, when clicked, will submit the form. The value attribute
+    sets the text that will be displayed on the button.
+
+    When the form is submitted, it will make a POST request to the home route (i.e., the root URL of your website). You
+    can handle this request on the server side using the appropriate framework or technology. -->
+    <form class="" action="/" method="post">
+        <input type="text" name="newItem">
+        <button type="submit" name="button">Add</button>
+    </form>
+
+
+
+
+</body>
+
+</html>

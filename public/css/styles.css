@@ -1,0 +1,77 @@
+/* Set the font family and size for the entire page */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Set a background color */
+body {
+  background-color: #f4f4f4;
+}
+
+/* Style the heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Style the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+li {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  margin: 10px 0;
+  padding: 20px;
+}
+
+/* Style the form */
+form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Style the text input */
+input[type=text] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #8e8e8e;
+  color: #8e8e8e;
+  font-size: 1rem;
+  margin-right: 10px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* Style the button */
+button {
+  background-color: #5f6368;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+/* Change the button color when hovered over */
+button:hover {
+  background-color: #202124;
+}
+
+/* Hide the button if the input field is empty */
+form button:disabled {
+  display: none;
+}
