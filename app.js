@@ -1,5 +1,7 @@
-const { addItem } = require('./db');
 const express = require("express");
+const { addItem } = require(__dirname + '/db.js');
+const date = require(__dirname + "/date.js");
+
 const bodyParser = require("body-parser");
 const app = express();
 var items = [];
@@ -11,15 +13,7 @@ app.use(express.static("public"));
 // const dayDict = { 1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday", 0: "Sunday" };
 
 app.get("/", function (req, res) {
-    var today = new Date();
-    const options = {
-        weekday: 'long',
-        month: 'long',
-        day: 'numeric'
-    };
-    let currentDay = today.toLocaleDateString('en-US', options);
-
-    res.render('list', { listTitle: currentDay, lisOfItems: items });
+    res.render('list', { listTitle: date.get_current_date() , lisOfItems: items });
 
 });
 
