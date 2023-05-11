@@ -1,15 +1,27 @@
-// jshint esversion:6
-console.log(module);
+//jshint esversion:6
 
-var get_current_date = function () {
-    var today = new Date();
-    const options = {
-        weekday: 'long',
-        month: 'long',
-        day: 'numeric'
-    };
-    let currentDay = today.toLocaleDateString('en-US', options);
-    return currentDay
-}
+exports.getDate = function() {
 
-exports.get_current_date = get_current_date;
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long"
+  };
+
+  return today.toLocaleDateString("en-US", options);
+
+};
+
+exports.getDay = function () {
+
+  const today = new Date();
+
+  const options = {
+    weekday: "long"
+  };
+
+  return today.toLocaleDateString("en-US", options);
+
+};

@@ -1,78 +1,96 @@
-/* Set the font family and size for the entire page */
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  margin: 0;
-  text-align: center;
+html {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  min-height: 1000px;
+  font-family: 'Montserrat';
 }
 
-/* Set a background color */
-body {
-  background-color: #f4f4f4;
-}
-
-/* Style the heading */
 h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin: 0;
-  padding: 20px 0;
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #A683E3;
   text-align: center;
 }
 
-/* Style the list */
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the list items */
-li {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-  list-style: none;
-  margin: 10px 0;
-  padding: 20px;
-}
-
-/* Style the form */
-form {
+.item {
+  min-height: 70px;
   display: flex;
-  justify-content: center;
-  margin: 20px 0;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
 }
 
-/* Style the text input */
-input[type=text] {
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #8e8e8e;
-  color: #8e8e8e;
-  font-size: 1rem;
-  margin-right: 10px;
-  padding: 10px 0;
-  width: 100%;
+.item:last-child {
+  border-bottom: 0;
 }
 
-/* Style the button */
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #A683E3;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
 button {
-  background-color: #5f6368;
-  border: none;
-  border-radius: 5px;
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #A683E3;
   color: #fff;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 10px 20px;
-  transition: all 0.3s ease;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
 }
 
-/* Change the button color when hovered over */
-button:hover {
-  background-color: #202124;
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
 }
 
-/* Hide the button if the input field is empty */
-form button:disabled {
-  display: none;
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
